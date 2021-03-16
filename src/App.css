@@ -8,10 +8,15 @@
 }
 
 .base {
+  padding: 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+.base button {
+  margin: 21px;
 }
 
 .map {

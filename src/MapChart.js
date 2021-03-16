@@ -9,8 +9,7 @@ import {
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-const MapChart = ({ setTooltipContent, setSelected }) => {
-  const [country, setCountry] = useState("")
+const MapChart = ({ setTooltipContent, selected, setSelected }) => {
   return (
     <>
       <ComposableMap data-tip=""
@@ -22,6 +21,7 @@ const MapChart = ({ setTooltipContent, setSelected }) => {
         maxHeight: "450"
       }}
       >
+        <ZoomableGroup>
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map(geo => (
@@ -36,12 +36,11 @@ const MapChart = ({ setTooltipContent, setSelected }) => {
                     setTooltipContent("");
                   }}
                   onClick={() => {
-                    setCountry(geo.properties.NAME)
                     setSelected(geo.properties.NAME)
                   }}
                   stroke='#aaa'
                   strokeWidth='0.5'
-                  fill = {geo.properties.NAME === country ? "#e42" : "#D6D6DA"}
+                  fill = {geo.properties.NAME === selected ? "#e42" : "#D6D6DA"}
                   style={{
                     default: {
                       outline: 'none'
@@ -59,6 +58,7 @@ const MapChart = ({ setTooltipContent, setSelected }) => {
               ))
             }
           </Geographies>
+        </ZoomableGroup>
       </ComposableMap>
     </>
   );

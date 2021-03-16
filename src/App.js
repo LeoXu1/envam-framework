@@ -13,10 +13,14 @@ function App() {
     <div>
       <div className="base">
         <h1>Framework</h1>
-        <h4>{selected}</h4>
+        {selected !== "Click a country" ? (
+          <button onClick={() => setSelected("Click a country")}>Clear selection</button>
+        ) : (
+          <h4>{selected}</h4>
+        )}
       </div>
       <div className="map">
-        <MapChart setSelected={setSelected} setTooltipContent={setContent} />
+        <MapChart selected={selected} setSelected={setSelected} setTooltipContent={setContent} />
         <ReactTooltip>{content}</ReactTooltip>
       </div>
     </div>
