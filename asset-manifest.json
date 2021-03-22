@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/envam-framework/static/css/main.8a40ff59.chunk.css",
-    "main.js": "/envam-framework/static/js/main.6bb0d5dc.chunk.js",
-    "main.js.map": "/envam-framework/static/js/main.6bb0d5dc.chunk.js.map",
+    "main.css": "/envam-framework/static/css/main.603865b3.chunk.css",
+    "main.js": "/envam-framework/static/js/main.5f77fcee.chunk.js",
+    "main.js.map": "/envam-framework/static/js/main.5f77fcee.chunk.js.map",
     "runtime-main.js": "/envam-framework/static/js/runtime-main.006f3105.js",
     "runtime-main.js.map": "/envam-framework/static/js/runtime-main.006f3105.js.map",
     "static/js/2.4937e6bb.chunk.js": "/envam-framework/static/js/2.4937e6bb.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.739bbadb.chunk.js": "/envam-framework/static/js/3.739bbadb.chunk.js",
     "static/js/3.739bbadb.chunk.js.map": "/envam-framework/static/js/3.739bbadb.chunk.js.map",
     "index.html": "/envam-framework/index.html",
-    "static/css/main.8a40ff59.chunk.css.map": "/envam-framework/static/css/main.8a40ff59.chunk.css.map",
+    "static/css/main.603865b3.chunk.css.map": "/envam-framework/static/css/main.603865b3.chunk.css.map",
     "static/js/2.4937e6bb.chunk.js.LICENSE.txt": "/envam-framework/static/js/2.4937e6bb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.006f3105.js",
     "static/js/2.4937e6bb.chunk.js",
-    "static/css/main.8a40ff59.chunk.css",
-    "static/js/main.6bb0d5dc.chunk.js"
+    "static/css/main.603865b3.chunk.css",
+    "static/js/main.5f77fcee.chunk.js"
   ]
 }
