@@ -14,11 +14,11 @@ const MapChart = ({ setTooltipContent, selected, setSelected }) => {
     <>
       <ComposableMap data-tip=""
       projectionConfig={{
-        rotate: [-15, 0, 0],
+        rotate: [-40, 0, 0],
         scale: 180
       }}
       style={{
-        maxHeight: "450"
+        maxHeight: "600"
       }}
       >
         <ZoomableGroup>
