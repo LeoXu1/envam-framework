@@ -8,39 +8,33 @@ import MapChart from "./MapChart";
 
 function App() {
   const [content, setContent] = useState("");
-  const [selected, setSelected] = useState("No country selected");
+  const [series, setSeries] = useState("CO2 emissions (metric tons per capita)");
+  const [year, setYear] = useState("2011")
   return (
     <div className="base">
       <div className="container">
         <h2>Environmental Awareness Model</h2>
         <div className="form">
           <label>Select data:</label>
-          <select>
-            <option>CO2 emissions</option>
-            <option>Greenhouse gas emissions</option>
+          <select value={series} onChange={e => setSeries(e.target.value)}>
+            <option>CO2 emissions (metric tons per capita)</option>
+            <option>CO2 emissions (kt)</option>
+            <option>Total greenhouse gas emissions (kt of CO2 equivalent)</option>
+            <option>Terrestrial and marine protected areas (% of total territorial area)</option>
+            <option>Access to electricity (% of population)</option>
+            <option>Energy use (kg of oil equivalent per capita)</option>
+            <option>GDP per unit of energy use (PPP $ per kg of oil equivalent)</option>
+            <option>Total natural resources rents (% of GDP)</option>
+
           </select>
         </div>
         <div className="form">
           <label>Select year:</label>
-          <select>
-            <option>2019</option>
-            <option>2020</option>
-          </select>
+          <input type="number" value={year} onChange={e => setYear(e.target.value)} />
         </div>
-        <h3>Filters</h3>
-        {selected !== "No country selected" ? (
-          <div className="form">
-            <h4>Country: {selected}</h4>
-            <button onClick={() => setSelected("No country selected")}>Clear selection</button>
-          </div>
-        ) : (
-          <div className="form">
-            <h4>Country: {selected}</h4>
-          </div>
-        )}
       </div>
       <div className="map">
-        <MapChart selected={selected} setSelected={setSelected} setTooltipContent={setContent} />
+        <MapChart series={series} year={year} setTooltipContent={setContent} />
         <ReactTooltip>{content}</ReactTooltip>
       </div>
     </div>
